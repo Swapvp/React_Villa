@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Nav from "../Components/Nav";
 
 const PropertyDetails = () => {
   return (
-    <div>PropertyDetails</div>
-  )
-}
+    <div>
+      <Nav />
+    </div>
+  );
+};
 
-export default PropertyDetails
+export default PropertyDetails;

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Contactinfo = () => {
   return (
-    <div>Contactinfo</div>
-  )
-}
+    <div className="flex">
+      <div></div>
+      <div></div>
+    </div>
+  );
+};
 
-export default Contactinfo
+export default Contactinfo;

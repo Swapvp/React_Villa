@@ -1,8 +1,10 @@
 import React from 'react'
+import Nav from "../Components/Nav";
+
 
 const Properties = () => {
   return (
-    <div>Properties</div>
+    <div><Nav /></div>
   )
 }
 
