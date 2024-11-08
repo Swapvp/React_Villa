@@ -7,6 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import "../App.css";
+import ScheduleBtn from "./ScheduleBtn";
 
 const Nav = () => {
   return (
@@ -34,7 +35,7 @@ const Nav = () => {
         <div className="flex justify-between items-center">
           <div className="text-3xl font-bold">VILLA</div>
           <div className="">
-            <ul className="flex gap-10 text-lg ">
+            <ul className="flex gap-10 text-lg items-center ">
               <li className="font-normal">
                 <NavLink
                   className={({ isActive }) =>
@@ -75,6 +76,7 @@ const Nav = () => {
                   Contact
                 </NavLink>
               </li>
+              <ScheduleBtn />
             </ul>
           </div>
         </div>
