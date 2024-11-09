@@ -8,8 +8,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { FiPhoneCall } from "react-icons/fi";
-import { FaRegEnvelope } from "react-icons/fa";
+import Forms from "../Components/Forms";
 
 const Home = () => {
   const [open, setOpen] = React.useState(1);
@@ -136,6 +135,7 @@ const Home = () => {
       {/* Section 2 */}
 
       <Contactinfo variant="home" />
+      <Forms />
       <Footer />
     </>
   );

@@ -7,7 +7,8 @@ import { FaRegEnvelope } from "react-icons/fa";
 const DivContainer = styled.div`
   display: ${(props) => (props.variant === "home" ? "flex" : "block")};
   background: #fff;
-  padding: 1rem;
+
+  padding: ${(props) => (props.variant === "home" ? "1rem" : "0px")};
   gap: 1rem;
 `;
 
