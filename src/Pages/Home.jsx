@@ -9,6 +9,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Forms from "../Components/Forms";
+import bgImage from "../assets/images/contact-bg.jpg";
 
 const Home = () => {
   const [open, setOpen] = React.useState(1);
@@ -134,8 +135,43 @@ const Home = () => {
       </section>
       {/* Section 2 */}
 
-      <Contactinfo variant="home" />
-      <Forms />
+      {/* Contact sec */}
+
+      <section
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className="h-96 text-center flex flex-col  items-center py-12"
+      >
+        <p className=" text-orange-800 border-l-4 border-red-800 font-bold text-xl px-4">
+          Contact Us
+        </p>
+        <h1 className="text-5xl text-white font-extrabold my-4 leading-tight w-1/2">
+          Get In Touch With Our Agents
+        </h1>
+      </section>
+      <section className="-mt-36">
+        <div className="container mx-auto flex justify-between gap-10 ">
+          <div className="w-3/5">
+            <div className="w-full h-96 rounded-md">
+              <iframe
+                title="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4348392449994!2d-122.4210912846821!3d37.77926097975606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818fd26b4f3d%3A0x7a7b8748493e9dd2!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <Contactinfo variant="home" />
+          </div>
+          <div className="w-2/5 shadow-lg">
+            <Forms />
+          </div>
+        </div>
+      </section>
+      {/* Contact sec */}
+
       <Footer />
     </>
   );
