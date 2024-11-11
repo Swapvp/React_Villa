@@ -10,6 +10,8 @@ import {
 } from "@material-tailwind/react";
 import Forms from "../Components/Forms";
 import bgImage from "../assets/images/contact-bg.jpg";
+import videoImage from "../assets/images/video-frame.jpg";
+import { FaPlayCircle } from "react-icons/fa";
 
 const Home = () => {
   const [open, setOpen] = React.useState(1);
@@ -38,6 +40,27 @@ const Home = () => {
       subHeading: "Total Flat Space",
     },
   ];
+
+  const videoData = [
+    {
+      num: 34,
+      heading: "Buildings Finished Now",
+      count: 1,
+    },
+    {
+      num: 12,
+      heading: "Years Experience",
+      count: 2,
+    },
+    {
+      num: 24,
+      heading: "Awwards Won 2023",
+      count: 3,
+    },
+  ];
+
+  const mapUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4348392449994!2d-122.4210912846821!3d37.77926097975606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818fd26b4f3d%3A0x7a7b8748493e9dd2!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus";
   return (
     <>
       <Nav />
@@ -64,7 +87,7 @@ const Home = () => {
 
       {/* Section 2 */}
       <section className="container  mx-auto py-12 ">
-        <div className="flex gap-8 w-full justify-center">
+        <div className="flex gap-8 w-full justify-around">
           <div className="w-[25%]">
             <img
               className="w-full h-full object-cover"
@@ -135,6 +158,43 @@ const Home = () => {
       </section>
       {/* Section 2 */}
 
+      {/* Video sec */}
+      <section
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className="h-96 text-center flex flex-col  items-center py-12"
+      >
+        <p className=" text-orange-800 border-l-4 border-red-800 font-bold text-xl px-4">
+          Video View
+        </p>
+        <h1 className="text-3xl text-white font-extrabold my-4 leading-tight w-1/2">
+          Get Closer View & Different Feeling
+        </h1>
+      </section>
+      <section className="-mt-36">
+        <div className="container mx-auto flex justify-center relative">
+          <img src={videoImage} alt="" className="rounded-2xl " />
+          <FaPlayCircle className="absolute top-2/4 text-5xl text-white outline outline-[15px] outline-orange-600 rounded-full " />
+        </div>
+        <div className="container mx-auto flex justify-around py-10 ">
+          {videoData.map((elem, i) => {
+            return (
+              <div className="flex items-center justify-start rounded-lg  p-4  w-72 py-7 gap-4 mt-3 bg-[#ffeee9] relative">
+                <p className="mr-2 text-orange-800 font-bold text-5xl">
+                  {elem.num}
+                </p>
+                <div>
+                  <h2 className="font-normal text-lg">{elem.heading}</h2>
+                </div>
+                <p className="absolute bg-orange-900 w-12 h-12  rounded-full -top-[15%] -right-[5%] text-center text-white font-bold text-3xl pt-2">
+                  {elem.count}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      {/* Video sec */}
+
       {/* Contact sec */}
 
       <section
@@ -144,7 +204,7 @@ const Home = () => {
         <p className=" text-orange-800 border-l-4 border-red-800 font-bold text-xl px-4">
           Contact Us
         </p>
-        <h1 className="text-5xl text-white font-extrabold my-4 leading-tight w-1/2">
+        <h1 className="text-3xl text-white font-extrabold my-4 leading-tight w-1/2">
           Get In Touch With Our Agents
         </h1>
       </section>
@@ -154,7 +214,7 @@ const Home = () => {
             <div className="w-full h-96 rounded-md">
               <iframe
                 title="google-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4348392449994!2d-122.4210912846821!3d37.77926097975606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818fd26b4f3d%3A0x7a7b8748493e9dd2!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                src={mapUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
