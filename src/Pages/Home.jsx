@@ -12,6 +12,8 @@ import Forms from "../Components/Forms";
 import bgImage from "../assets/images/contact-bg.jpg";
 import videoImage from "../assets/images/video-frame.jpg";
 import { FaPlayCircle } from "react-icons/fa";
+import InfoTable from "../Components/InfoTable";
+import PropertyCard from "../Components/PropertyCard";
 
 const Home = () => {
   const [open, setOpen] = React.useState(1);
@@ -26,18 +28,18 @@ const Home = () => {
     },
     {
       src: "src/assets/images/info-icon-02.png",
-      heading: "250 m2",
-      subHeading: "Total Flat Space",
+      heading: "Contract",
+      subHeading: "Contract Ready",
     },
     {
       src: "src/assets/images/info-icon-03.png",
-      heading: "250 m2",
-      subHeading: "Total Flat Space",
+      heading: "Payment",
+      subHeading: "Payment Process",
     },
     {
       src: "src/assets/images/info-icon-04.png",
-      heading: "250 m2",
-      subHeading: "Total Flat Space",
+      heading: "Safety",
+      subHeading: "24/7 Under Control",
     },
   ];
 
@@ -61,6 +63,75 @@ const Home = () => {
 
   const mapUrl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4348392449994!2d-122.4210912846821!3d37.77926097975606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818fd26b4f3d%3A0x7a7b8748493e9dd2!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus";
+
+  const cardHome = [
+    {
+      src: "src/assets/images/property-01.jpg",
+      type: "Luxury Villa",
+      price: "2,264.000",
+      headiing: "18 New Street Miami, OR 97219",
+      bedroom: "8",
+      bathrooms: "8",
+      area: "45m2",
+      floor: "3",
+      parking: "6 Spots",
+    },
+    {
+      src: "src/assets/images/property-02.jpg",
+      type: "Luxury Villa",
+      price: "1.180.000",
+      headiing: "54 Mid Street Florida, OR 27001",
+      bedroom: "6",
+      bathrooms: "5",
+      area: "45m2",
+      floor: "3",
+      parking: "8 Spots",
+    },
+    {
+      src: "src/assets/images/property-03.jpg",
+      type: "Luxury Villa",
+      price: "1.460.000",
+      headiing: "26 Old Street Miami, OR 38540",
+      bedroom: "5",
+      bathrooms: "4",
+      area: "225m2",
+      floor: "3",
+      parking: "10 Spots",
+    },
+    {
+      src: "src/assets/images/property-04.jpg",
+      type: "Apartment",
+      price: "584.500",
+      headiing: "12 New Street Miami, OR 12650",
+      bedroom: "4",
+      bathrooms: "3",
+      area: "125m2",
+      floor: "25th",
+      parking: "2 cars",
+    },
+    {
+      src: "src/assets/images/property-05.jpg",
+      type: "Penthouse",
+      price: "925.600",
+      headiing: "34 Beach Street Miami, OR 42680",
+      bedroom: "4",
+      bathrooms: "4",
+      area: "180m2",
+      floor: "38th",
+      parking: "2 cars",
+    },
+    {
+      src: "src/assets/images/property-06.jpg",
+      type: "Modern Condo",
+      price: "450.000",
+      headiing: "22 New Street Portland, OR 16540",
+      bedroom: "3",
+      bathrooms: "2",
+      area: "165m2",
+      floor: "26th",
+      parking: "3 cars",
+    },
+  ];
   return (
     <>
       <Nav />
@@ -138,22 +209,7 @@ const Home = () => {
               </Accordion>
             </div>
           </div>
-          <div className="bg-white shadow-lg w-[25%] ">
-            {featureData.map((elem, i) => {
-              return (
-                <div
-                  key={i}
-                  className="flex items-center justify-start bg-white  p-4 rounded w-80 py-7 gap-4 mt-3"
-                >
-                  <img className="w-14 " src={elem.src} alt="" />
-                  <div>
-                    <h2 className="font-bold text-2xl">{elem.heading}</h2>
-                    <p className="text-lg text-gray-500">{elem.subHeading}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <InfoTable data={featureData} />
         </div>
       </section>
       {/* Section 2 */}
@@ -194,6 +250,23 @@ const Home = () => {
         </div>
       </section>
       {/* Video sec */}
+
+      {/* property card sec */}
+
+      <section className="container mx-auto  p-12">
+        <div className="flex flex-col justify-center items-center p-8">
+          <p className=" text-orange-800 border-l-4 border-red-800 font-bold text-xl px-4">
+            Contact Us
+          </p>
+          <h1 className="text-3xl text-black font-extrabold my-4 leading-tight ">
+            Get In Touch With Our Agents
+          </h1>
+        </div>
+        <div className="flex flex-wrap gap-7 justify-center">
+          <PropertyCard data={cardHome} />
+        </div>
+      </section>
+      {/* property card sec */}
 
       {/* Contact sec */}
 
