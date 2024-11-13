@@ -14,6 +14,7 @@ import videoImage from "../assets/images/video-frame.jpg";
 import { FaPlayCircle } from "react-icons/fa";
 import InfoTable from "../Components/InfoTable";
 import PropertyCard from "../Components/PropertyCard";
+import BestDeal from "../Components/BestDeal";
 
 const Home = () => {
   const [open, setOpen] = React.useState(1);
@@ -250,6 +251,10 @@ const Home = () => {
         </div>
       </section>
       {/* Video sec */}
+
+      {/* Best Deal */}
+      <BestDeal />
+      {/* Best Deal */}
 
       {/* property card sec */}
 
