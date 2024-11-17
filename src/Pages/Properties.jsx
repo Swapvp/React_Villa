@@ -96,7 +96,7 @@ function FilterTabs() {
               key={tab}
               className={`px-4 py-2 mx-2 text-sm font-bold rounded-lg ${
                 activeTab === tab
-                  ? "bg-black text-white"
+                  ? "bg-orange-700 text-white"
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
               onClick={() => setActiveTab(tab)}
