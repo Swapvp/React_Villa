@@ -6,6 +6,7 @@ import Home from "./Pages/Home.jsx";
 import Properties from "./Pages/Properties.jsx";
 import PropertyDetails from "./Pages/PropertyDetails.jsx";
 import Contact from "./Pages/Contact.jsx";
+import Details from "./Components/Details.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+
+  {
+    path: "/Details/:id",
+    element: <Details />,
   },
 ]);
 

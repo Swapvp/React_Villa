@@ -67,6 +67,7 @@ const Home = () => {
 
   const cardHome = [
     {
+      id: 1,
       src: "src/assets/images/property-01.jpg",
       type: "Luxury Villa",
       price: "2,264.000",
@@ -78,6 +79,7 @@ const Home = () => {
       parking: "6 Spots",
     },
     {
+      id: 2,
       src: "src/assets/images/property-02.jpg",
       type: "Luxury Villa",
       price: "1.180.000",
@@ -89,6 +91,7 @@ const Home = () => {
       parking: "8 Spots",
     },
     {
+      id: 3,
       src: "src/assets/images/property-03.jpg",
       type: "Luxury Villa",
       price: "1.460.000",
@@ -100,6 +103,7 @@ const Home = () => {
       parking: "10 Spots",
     },
     {
+      id: 4,
       src: "src/assets/images/property-04.jpg",
       type: "Apartment",
       price: "584.500",
@@ -111,6 +115,7 @@ const Home = () => {
       parking: "2 cars",
     },
     {
+      id: 5,
       src: "src/assets/images/property-05.jpg",
       type: "Penthouse",
       price: "925.600",
@@ -122,6 +127,7 @@ const Home = () => {
       parking: "2 cars",
     },
     {
+      id: 6,
       src: "src/assets/images/property-06.jpg",
       type: "Modern Condo",
       price: "450.000",
@@ -235,7 +241,10 @@ const Home = () => {
         <div className="container mx-auto flex justify-around py-10 ">
           {videoData.map((elem, i) => {
             return (
-              <div className="flex items-center justify-start rounded-lg  p-4  w-72 py-7 gap-4 mt-3 bg-[#ffeee9] relative">
+              <div
+                key={i}
+                className="flex items-center justify-start rounded-lg  p-4  w-72 py-7 gap-4 mt-3 bg-[#ffeee9] relative"
+              >
                 <p className="mr-2 text-orange-800 font-bold text-5xl">
                   {elem.num}
                 </p>
